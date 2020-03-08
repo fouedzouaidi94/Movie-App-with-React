@@ -1,23 +1,33 @@
-import React from 'react';
+import { FaStar } from "react-icons/fa";
+import React, { Component } from "react";
 
-import StarRatingComponent from 'react-star-rating-component';
- 
-class Rating extends React.Component {
+class Rating extends Component {
   render() {
-    const  rating  = this.state;
- 
-    return (                
+    return (
       <div>
-        <h2>Rating from state: {rating}</h2>
-        <StarRatingComponent 
-          name="rate2" 
-          editing={false}
-          renderStarIcon={() => <span>*</span>}
-          starCount={10}
-          value={8}
-        />
+        {[...Array(5)].map((star, i) => {
+          return i <= this.props.rate ? (
+            <FaStar
+              key={i}
+              className="star"
+              color="rgb(255, 237, 118)"
+              onClick={() =>
+                this.props.changeRate ? this.props.changeRate(i) : null
+              }size={this.props.size}
+            ></FaStar>
+          ) : (
+            <FaStar
+              key={i}
+              className="star"
+              onClick={() =>
+                this.props.changeRate ? this.props.changeRate(i) : null
+              } size={this.props.size}
+            ></FaStar>
+          );
+        })}
       </div>
     );
   }
 }
-export default  Rating
+
+export default Rating;
