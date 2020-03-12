@@ -6,11 +6,7 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-        <img
-          className="netflix-logo"
-          src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Logo_Netflix.png"
-          alt="logo"
-        />
+        <h1><span id="egy">EGY</span> <span id="best">BEST</span></h1>
         <div className="search-container">
           <span className="svg">
             <svg

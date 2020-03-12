@@ -3,7 +3,7 @@
     height: 30px;
     display: flex;
     align-items: center;
-    background-color: #343a40;
+    background-color:transparent;
     padding: 50px;
     justify-content: space-around;
     
@@ -22,11 +22,12 @@
     padding-left: 5px;
     color: white;
   }
-  .netflix-logo{
-    width: 200px;
-    height: 120px;
-    border: none;
-    margin-right: 100px;
+  
+  #egy{
+    color: #f90000;
+  }
+  #best{
+    color: #0064ca;
   }
   .star{
     transition-duration: 1s;
